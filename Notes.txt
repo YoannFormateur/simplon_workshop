@@ -1,0 +1,69 @@
+Git / GitHub jeudi 30 août 2018 
+
+Présentation réalisée par Haroon et Adam
+
+GIT
+Système de suivi des évolutions de documents
+
+GITHUB
+Stockage de ces documents
+
+ * Versioning
+ * Bases
+ * Utilisation effective
+
+* Versioning
+  ** Collaboration sur un projet
+  ** Suivi et possibilité de retour en arrière
+  ** de CVS à GIT en passant par SVN
+
+NOTE: CVS, SVN : Contrôle de version centralisé
+      GIT : Contrôle de version distribué
+
+* Bases
+  ** Installation
+    Config: user.name yoann_formateur / user.email yblanchet.ext@simplon.co
+    Connexion au compte GitHub
+    Copie clé publique ssh sur compte GitHub
+  ** Commandes
+    git init : initialise git dans un nouveau répertoire de travail
+    git status
+    git add <nouveau_fichier> : demande le suivi du fichier ou des modifications par git
+    git add . : demande le suivi sur tout le répertoire (récursivement) NOTE: A combiner avec .gitignore
+    git commit -m "First commit. Added hello world to repository."
+    git log OU gitk (avec interface graphique)
+    git log <nom_branche> : idem commande précédente pour branche spécifiée
+    git checkout <fichier> : ramène <fichier> à la dernière version commitée (si aucun add réalisé)
+    git reset HEAD <fichier> : idem précédent (si add a été réalisé)
+    git reset <nouveau_fichier> si le fichier est nouvellement créé
+    (git rm <nouveau-fichier> idem commande précédente avec suppession physique du fichier en plus) 
+    git log --pretty=oneline : affiche commit avec leur identifiant
+    git revert [HASH] : revient sur le commit référencé par HASH ou au moins par les 6 premiers caracatères de HASH
+
+* Branches
+  ** Introduction
+    Permet de réaliser des modifications sur un projet sans l'impacter directement
+  ** Commandes  
+    git checkout -b <nom_branche> : crée et passe sur nouvelle branche (checkout pour passage, -b pour création)
+    git branch : liste les branches
+    git checkout <nom_branche> : passage sur la branche spécifiée
+    git checkout master : passage sur la branche master
+    git merge <nom_branche> : merge branche spécifiée sur branche courante
+    git rebase <nom_branche> : idem commande précédente avec suppression de la branche spécifiée en plus
+
+* GitHub
+  ** Mise en place
+    Création du repository GitHub
+    Lien du repository local avec le GitHub par git remote add origin git@github... (donnée par GitHub lors de la création)
+    Push sur GitHub par git push origin master
+    Edition du README (git add README, git commit -m "Define README", git push -u origin master) 
+  ** Fork
+    Après avoir Forker le projet, récupérer l'info de clone pour récupération en local : git clone <repo donné par GitHub>
+    git remote add upstream https://<repo_original> : lie le repo orignal au repo local
+    git fetch upstream : récupération du repo original (avant fork) 
+    
+
+
+    
+    
+
