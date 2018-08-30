@@ -1,3 +1,5 @@
+Changement pour merge avec conflit
 Premier changement dans le fichier
 
+<<<<<<< HEAD
 Je fais des modifications sur la branche master
