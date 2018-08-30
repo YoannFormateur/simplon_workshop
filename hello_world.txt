@@ -1,3 +1,6 @@
+Changement pour merge avec conflit
 Premier changement dans le fichier
 
 avec ligne supplémentaire pour version-2
+
+
